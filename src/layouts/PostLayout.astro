@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets"
 import PostsMenu from "../components/PostsMenu.astro"
 import MainLayout from "./MainLayout.astro";
 const { frontmatter } = Astro.props;
@@ -8,6 +9,8 @@ const { title } = frontmatter;
 <MainLayout title={title}>
 
   <PostsMenu />
+
+  <Image src={frontmatter.img.src} alt={frontmatter.img.alt} width="500" height="250" transition:name={frontmatter.img.src} />
 
   <div class="prose">
     <slot />

@@ -21,7 +21,7 @@ const { title, description, img, tags, url } = Astro.props;
   <a href={url}>
     <!--! En lugar de img es mejor usar el componente de Astro Image  -->
     <!-- <img src={img.src} alt={img.alt} width="500px" height="250px"> -->
-    <Image src={img.src} alt={img.alt} width="500" height="250"/>
+    <Image src={img.src} alt={img.alt} width="500" height="250" transition:name={img.src}>
     <!-- <Image src={img.src} alt={img.alt} inferSize/> -->
   </a>
   <a href={url}>
